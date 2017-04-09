@@ -1,3 +1,65 @@
 page-store {
 
+    .store_logo {
+        position: relative;
+        height: 100px;
+        margin: auto;
+        width: 100px;
+        border-radius: 50%;
+        top: 0px;
+        z-index: 2;
+        padding-bottom: 0px;
+        border: 3px solid;
+        border-color: grey;
+    }
+
+     #btn_close {
+        color: black;
+        font-size: 40px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .btn_follow {
+        color: #5e95ef;
+        background-color: transparent;
+        border-color: #5e95ef;
+        border: 1px solid;
+        border-radius: 7px;
+        width: 93%;
+        margin-bottom: 10px;
+    }
+
+    .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .rating > span {
+        display: inline-block;
+        position: relative;
+        width: 1.1em;
+    }
+
+    .rating > span:hover:before,
+    .rating > span:hover ~ span:before {
+        content: "\2605";
+        position: absolute;
+    }
+
+    .stars {
+        font-size: 20px;
+        color: #87c316;
+    }
+
+    .product {
+        height: 100px;
+        margin: auto;
+        padding: 0px;
+        width: auto;
+        overflow: hidden;   
+        position: relative;
+        margin-top: 20px;
+    }
 }

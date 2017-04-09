@@ -5,14 +5,46 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>store</ion-title>
-  </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
+<button ion-button clear icon-only (click)="onCloseClicked()">
+  <ion-icon name="ios-close-circle" id="btn_close"></ion-icon>
+</button>
 
+  <div text-center>
+    <img src="assets/img/redline_logo.png" class="store_logo">
+    <h2>REDLINE TECHNOLOGIES</h2>
+    <p text-wrap>3rd Floor, Majestic City, Galle Rd, Colombo</p>
+  </div>
+  <div text-center class="rating">
+    <span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span>
+    <p>8095 reviews</p>
+  </div>
+  <div>
+    <ion-list no-lines scrollX="true">
+      <ion-item>
+        <ion-card text-center>
+          <img src="assets/img/sample_product.png" class="product"/>
+          <ion-card-content>
+            <ion-card-title>GeForce GTX 1080</ion-card-title>
+            <p text-wrap>Ordered : 05/01/2017</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+      <ion-item>
+        <ion-card text-center>
+          <img src="assets/img/sample_product.png" class="product"/>
+          <ion-card-content>
+            <ion-card-title>GeForce GTX 1080</ion-card-title>
+            <p text-wrap>Ordered : 05/01/2017</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div text-center>
+    <button  ion-button class="btn_follow" (click)="onFollowClicked()">FOLLOW STORE</button>
+  </div>
 </ion-content>

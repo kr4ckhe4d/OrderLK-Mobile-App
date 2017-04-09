@@ -14,7 +14,9 @@ import { TabsPage } from "../tabs/tabs";
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public viewCtrl: ViewController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public viewCtrl: ViewController, 
+              public navParams: NavParams) {
   }
 
   ionViewDidLoad() {

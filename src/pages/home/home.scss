@@ -8,6 +8,8 @@ page-home {
         top: -50px;
         z-index: 2;
         padding-bottom: 0px;
+        border: 3px solid;
+        border-color: grey;
     }
 
     .store_cover_div {
@@ -42,6 +44,11 @@ page-home {
     .rating > span:hover ~ span:before {
         content: "\2605";
         position: absolute;
+    }
+
+    .stars {
+        font-size: 20px;
+        color: #87c316;
     }
 
 }
