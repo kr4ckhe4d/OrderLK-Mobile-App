@@ -1,23 +1,24 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PostsplashPage } from "../postsplash/postsplash";
 
 /**
- * Generated class for the Home page.
+ * Generated class for the Splash page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+  selector: 'page-splash',
+  templateUrl: 'splash.html',
 })
-export class HomePage {
+export class SplashPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Home');
+    console.log('ionViewDidLoad Splash');
+    this.navCtrl.push(PostsplashPage);
   }
-
 }

@@ -1,0 +1,58 @@
+page-postsplash {
+    ion-content{
+        background-image: url('../assets/img/bg_app.jpg');
+    }
+
+    #logo {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    #tagline_div {
+        margin: 0px auto;
+        width: 60%;
+    }
+
+    #txt_tagline {
+        color: white;
+        font-size: 30px;
+    }
+
+    #button_section {
+        position:absolute;
+        bottom:0;
+        left: 0;
+        right: 0;
+    }
+
+    #btn_facebook {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 0px;
+        border-bottom: 1px solid;
+    }
+
+    #btn_login {
+        float: left;
+        width: 50%;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 0px;
+        border-right: 1px solid;
+    }
+
+    #btn_sign_up {
+        float: right;
+        width: 50%;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 0px;
+        border: 0px;
+    }
+
+    .bottom_btn {
+        height: 60px;
+        background-color: #77a1eb;
+    }
+}
