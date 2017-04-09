@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, NavOptions } from 'ionic-angular';
 import { LoginPage } from "../login/login";
+import { TabsPage } from "../tabs/tabs";
 
 /**
  * Generated class for the Postsplash page.
@@ -22,7 +23,8 @@ export class PostsplashPage {
   }
 
   onLoginClicked() {
-    let modal = this.modalCtrl.create(LoginPage);
-    modal.present();
+    //let modal = this.modalCtrl.create(LoginPage);
+    //modal.present();
+    this.navCtrl.push(LoginPage);
   }
 }
