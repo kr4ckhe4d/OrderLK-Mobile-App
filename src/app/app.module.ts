@@ -15,6 +15,7 @@ import { PostsplashPage } from "../pages/postsplash/postsplash";
 import { ProfilePage } from "../pages/profile/profile";
 import { StorePage } from "../pages/store/store";
 import { LoginPage } from "../pages/login/login";
+import { DealsPage } from "../pages/deals-page/deals-page";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoginPage } from "../pages/login/login";
     ProfilePage,
     StorePage,
     LoginPage,
-    TabsPage
+    TabsPage,
+    DealsPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { LoginPage } from "../pages/login/login";
     ProfilePage,
     StorePage,
     LoginPage,
-    TabsPage
+    TabsPage,
+    DealsPage
   ],
   providers: [
     StatusBar,

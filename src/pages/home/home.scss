@@ -11,13 +11,11 @@ page-home {
         border: 3px solid;
         border-color: grey;
     }
-
     .store_cover_div {
         z-index: 1;
         height: 100px;
         overflow: hidden;
     }
-
     .btn_follow {
         color: #5e95ef;
         background-color: transparent;
@@ -27,28 +25,30 @@ page-home {
         width: 93%;
         margin-bottom: 10px;
     }
-
     .rating {
         unicode-bidi: bidi-override;
         direction: rtl;
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .rating > span {
+    .rating>span {
         display: inline-block;
         position: relative;
         width: 1.1em;
     }
-
-    .rating > span:hover:before,
-    .rating > span:hover ~ span:before {
+    .rating>span:hover:before,
+    .rating>span:hover~span:before {
         content: "\2605";
         position: absolute;
     }
-
     .stars {
         font-size: 20px;
         color: #87c316;
     }
-
+    .toolbar-background {
+        background-image: $background-image;
+    }
+    .burger {
+        color: white;
+    }
 }

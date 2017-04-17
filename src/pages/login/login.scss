@@ -1,41 +1,35 @@
 page-login {
-    ion-content{
+    ion-content {
         background-image: url('../assets/img/bg_app.jpg');
     }
-
     #btn_close {
         color: black;
         font-size: 40px;
         padding: 0px;
         margin: 0px;
     }
-
     #btn_account {
         background-color: transparent;
         padding: 0px;
         margin: 0px;
     }
-
     #div_login {
-        position:relative;
-        bottom:-30px;
+        position: relative;
+        bottom: -30px;
         left: 0;
         right: 0;
     }
-
     #bottom_div {
-        position:absolute;
-        bottom:40px;
+        position: absolute;
+        bottom: 40px;
         left: 0;
         right: 0;
     }
-
     #txt_member {
         color: white;
         padding: 0px;
         margin: 0px;
     }
-
     #btn_login {
         color: white;
         background-color: transparent;
@@ -44,15 +38,16 @@ page-login {
         border-radius: 7px;
         width: 93%;
     }
-
     #logo {
         padding-top: 0px;
         padding-bottom: 60px;
     }
-
     .txt_login {
         border-bottom: 1px solid;
         border-color: white;
         color: white;
+    }
+    .toolbar-background {
+        background-image: $background-image;
     }
 }

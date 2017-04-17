@@ -4,11 +4,10 @@ page-profile {
         margin: auto;
         padding: 0px;
         width: auto;
-        overflow: hidden;   
+        overflow: hidden;
         position: relative;
         margin-top: 20px;
     }
-
     .user_logo {
         position: relative;
         height: 100px;
@@ -21,7 +20,6 @@ page-profile {
         top: -50px;
         z-index: 2;
     }
-
     .user_cover_div {
         z-index: 1;
         height: 100px;
@@ -29,7 +27,6 @@ page-profile {
         padding: 0px;
         margin: 0px;
     }
-
     .btn_follow {
         color: #5e95ef;
         background-color: transparent;
@@ -39,8 +36,10 @@ page-profile {
         width: 93%;
         margin-bottom: 10px;
     }
-
     .below_pic {
         margin-top: -60px;
+    }
+    .toolbar-background {
+        background-image: $background-image;
     }
 }

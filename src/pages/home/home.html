@@ -6,29 +6,29 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <button ion-button menuToggle icon-only persistent="true">
+    <ion-navbar>
+        <button ion-button menuToggle icon-only persistent="true" class="burger">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-<ion-card text-center>
-  <div class="store_cover_div">
-    <img src="assets/img/redline_cover.jpg">
-  </div>
-  <img src="assets/img/redline_logo.png" class="store_logo">
-  <ion-item text-center>
-    <h2>REDLINE TECHNOLOGIES</h2>
-    <p text-wrap>3rd Floor, Majestic City, Galle Rd, Colombo</p>
-  </ion-item>
-  <div class="rating">
-    <span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span>
-    <p>8095 reviews</p>
-  </div>
-  <button ion-button class="btn_follow" (click)="onFollowClicked()">FOLLOW STORE</button>
-</ion-card>
+    <ion-card text-center>
+        <div class="store_cover_div">
+            <img src="assets/img/redline_cover.jpg">
+        </div>
+        <img src="assets/img/redline_logo.png" class="store_logo">
+        <ion-item text-center>
+            <h2>REDLINE TECHNOLOGIES</h2>
+            <p text-wrap>3rd Floor, Majestic City, Galle Rd, Colombo</p>
+        </ion-item>
+        <div class="rating">
+            <span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span>
+            <p>8095 reviews</p>
+        </div>
+        <button ion-button class="btn_follow" (click)="onFollowClicked()">FOLLOW STORE</button>
+    </ion-card>
 </ion-content>
