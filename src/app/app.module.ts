@@ -16,6 +16,7 @@ import { ProfilePage } from "../pages/profile/profile";
 import { StorePage } from "../pages/store/store";
 import { LoginPage } from "../pages/login/login";
 import { DealsPage } from "../pages/deals-page/deals-page";
+import { CartPage } from "../pages/cart-page/cart-page";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DealsPage } from "../pages/deals-page/deals-page";
     StorePage,
     LoginPage,
     TabsPage,
-    DealsPage
+    DealsPage,
+    CartPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { DealsPage } from "../pages/deals-page/deals-page";
     StorePage,
     LoginPage,
     TabsPage,
-    DealsPage
+    DealsPage,
+    CartPage
   ],
   providers: [
     StatusBar,
