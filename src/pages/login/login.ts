@@ -34,13 +34,13 @@ export class LoginPage {
 
   onLoginClicked() {
     
-    this.afAuth.auth.signInWithEmailAndPassword(this.loginInput.email, this.loginInput.password).then(function(user){
+    this.afAuth.auth.signInWithEmailAndPassword(this.loginInput.email, this.loginInput.password).then((user)=>{
       if(user){
         user = firebase.auth().currentUser;
         console.log("Logged In successfully: " + JSON.stringify(user));
-        this.navCtrl.push(TabsPage);
+        this.navCtrl.setRoot(TabsPage);
       }
-    },function(error){
+    },(error)=>{
         var errorName = error.name;
         var errorMessage = error.message;
         console.log("errorCode: " + errorName);
