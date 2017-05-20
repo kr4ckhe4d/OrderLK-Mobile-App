@@ -18,6 +18,25 @@ import { LoginPage } from "../pages/login/login";
 import { DealsPage } from "../pages/deals-page/deals-page";
 import { CartPage } from "../pages/cart-page/cart-page";
 
+import { AngularFireModule } from 'angularfire2';
+import { RestService } from "../providers/rest-service";
+import { HttpModule } from "@angular/http";
+
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyD_5HUaYv3buIMBEzwR52K6bwDrHBe2LjI",
+    authDomain: "mobile-platform-cpmad.firebaseapp.com",
+    databaseURL: "https://mobile-platform-cpmad.firebaseio.com",
+    projectId: "mobile-platform-cpmad",
+    storageBucket: "mobile-platform-cpmad.appspot.com",
+    messagingSenderId: "153676263445"
+  }
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -33,7 +52,10 @@ import { CartPage } from "../pages/cart-page/cart-page";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -51,6 +73,7 @@ import { CartPage } from "../pages/cart-page/cart-page";
   providers: [
     StatusBar,
     SplashScreen,
+    RestService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -94,7 +94,7 @@
             width: 100%;
         }
         .item-thumb {
-            height: 250px;
+            height: 270px;
             margin: 5px;
             -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75);
@@ -111,5 +111,11 @@
             padding: 3px 20px 3px 20px;
             border: solid #400287 2px;
             text-decoration: none;
+        }
+        .pane {
+            background: url(../../assets/img/bg_deals.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
         }
     }
