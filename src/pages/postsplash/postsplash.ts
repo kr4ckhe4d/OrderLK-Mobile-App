@@ -7,6 +7,7 @@ import { TabsPage } from "../tabs/tabs";
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from "rxjs/Observable";
+import { SignUpPage } from "../sign-up-page/sign-up-page";
 /**
  * Generated class for the Postsplash page.
  *
@@ -37,17 +38,7 @@ export class PostsplashPage {
   }
 
   onSignupClicked(){
-    this.afAuth.auth.createUserWithEmailAndPassword("nipuna2@xyz.com", "user@123").then(function(user) {
-    user = firebase.auth().currentUser;
-    console.log("Registered successfully: " + JSON.stringify(user));
-}, function(error) {
-    // Handle Errors here.
-    var errorName = error.name;
-    var errorMessage = error.message;
-    console.log("errorCode: " + errorName);
-    console.log("errorMessage: " + errorMessage);
-
-});
+    this.navCtrl.push(SignUpPage);
   }
 
   onSignupWithFB(){

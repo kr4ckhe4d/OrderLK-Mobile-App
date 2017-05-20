@@ -23,6 +23,7 @@ import { RestService } from "../providers/rest-service";
 import { HttpModule } from "@angular/http";
 
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { SignUpPage } from "../pages/sign-up-page/sign-up-page";
 
 
 export const environment = {
@@ -48,7 +49,8 @@ export const environment = {
     LoginPage,
     TabsPage,
     DealsPage,
-    CartPage
+    CartPage,
+    SignUpPage
   ],
   imports: [
     BrowserModule,
@@ -68,7 +70,8 @@ export const environment = {
     LoginPage,
     TabsPage,
     DealsPage,
-    CartPage
+    CartPage,
+    SignUpPage
   ],
   providers: [
     StatusBar,
