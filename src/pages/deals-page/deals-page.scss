@@ -1,5 +1,104 @@
-page-deals-page {
-    .toolbar-background {
-        background-image: $background-image;
+    page-deals-page {
+        .toolbar-background {
+            background-image: $background-image;
+        }
+        a {
+            text-decoration: none;
+        }
+        // common class
+        .pull-right {
+            float: right;
+        }
+        .flex-wrap {
+            flex-wrap: wrap;
+            .col-50 {
+                padding: 5px;
+            }
+        }
+        // header
+        .button .header-badge {
+            color: light;
+            position: absolute;
+            top: 0.2em;
+            left: 0.7em;
+            font-size: 0.8em;
+        }
+        // login page
+        .social-button {
+            color: #FFF;
+            i {
+                font-size: 1.8em;
+                vertical-align: middle;
+                margin-left: 0.5em;
+            }
+            span {
+                vertical-align: middle;
+            }
+        }
+        .facebook-login {
+            background: #3B5999;
+        }
+        .twitter-login {
+            background: #00ACEE;
+        }
+        // product style
+        .product-title {
+            color: black;
+            font-size: 1.2em;
+            display: block;
+        }
+        .product-desc {
+            color: green;
+            font-size: 0.9em;
+            display: block;
+        }
+        .old-price {
+            color: #8f8f8f;
+            text-decoration: line-through;
+            font-size: 0.8em;
+        }
+        .slider-pager .slider-pager-page {
+            color: light;
+        }
+        .item-options {
+            select {
+                width: 100%;
+                padding: 0.4em 0;
+            }
+        }
+        .product-detail {
+            .price {
+                font-size: 1.2em;
+                padding-bottom: 0;
+            }
+            .old-price {
+                font-size: 1em;
+            }
+        }
+        // cart page
+        .cart {
+            .col {
+                padding-left: 0;
+            }
+            select {
+                padding: 0.2em;
+                vertical-align: middle;
+            }
+            .trash {
+                font-size: 1.8em;
+                vertical-align: middle;
+            }
+        }
+        .full-image {
+            height: 50%;
+            width: 100%;
+        }
+        .item-thumb {
+            height: 250px;
+            margin: 5px;
+            -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75);
+            text-align: center;
+        }
     }
-}
