@@ -1,0 +1,55 @@
+<ion-content class="login-content" padding>
+    <div class="login-box">
+        <button ion-button clear icon-only (click)="onCloseClicked()">
+  <ion-icon name="ios-close-circle" id="btn_close"></ion-icon>
+</button>
+        <form (ngSubmit)="onSignUpClicked()" #registerForm="ngForm">
+            <ion-row>
+                <ion-col>
+                    <ion-list inset id="regForm">
+                        <ion-item>
+                            <ion-input type="text" [ngModelOptions]="{standalone: true}" placeholder="First Name" name="fname" [(ngModel)]="registerCredentials.fname" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input type="text" [ngModelOptions]="{standalone: true}" placeholder="Last Name" name="lname" [(ngModel)]="registerCredentials.lname" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input type="text" [ngModelOptions]="{standalone: true}" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required></ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-input type="password" [ngModelOptions]="{standalone: true}" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input type="text" [ngModelOptions]="{standalone: true}" placeholder="Street Address" name="street_address" [(ngModel)]="registerCredentials.street_address" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input type="text" [ngModelOptions]="{standalone: true}" placeholder="Country" name="country" [(ngModel)]="registerCredentials.country" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input type="text" [ngModelOptions]="{standalone: true}" placeholder="City" name="city" [(ngModel)]="registerCredentials.city" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input type="number" [ngModelOptions]="{standalone: true}" placeholder="Postal Code" name="postal" [(ngModel)]="registerCredentials.postal" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input type="number" class="contact_no" [ngModelOptions]="{standalone: true}" placeholder="Contact Number" name="contact_no" [(ngModel)]="registerCredentials.contact_no" required></ion-input>
+                        </ion-item>
+                        <div *ngIf="fieldTypes">
+                            <ion-item *ngFor="let domType of fieldTypes">
+                                <ion-input type="text" placeholder="{{domType.name}}" required></ion-input>
+                            </ion-item>
+                        </div>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col class="signup-col">
+                    <button ion-button id="btn_login" full type="submit" [disabled]="!registerForm.form.valid">Register</button>
+                </ion-col>
+            </ion-row>
+
+        </form>
+    </div>
+</ion-content>

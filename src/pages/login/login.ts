@@ -46,10 +46,10 @@ export class LoginPage {
 
             this.restApi.loginUser(this.loginInput.email,this.loginInput.password)
     .then(data => {
-      if(data.access_token){
-              this.accessToken = data.access_token;
+      if(data){
+              this.accessToken = data;
       console.log(this.accessToken);
-      this.storage.set('access_token', data.access_token).then(()=>{
+      this.storage.set('access_token', data).then(()=>{
               this.navCtrl.setRoot(TabsPage);      
 
       });

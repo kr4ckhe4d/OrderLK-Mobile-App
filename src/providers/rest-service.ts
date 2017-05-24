@@ -33,10 +33,22 @@ export class RestService {
   });
 }
 
+  getFieldTypes() {
+
+  return new Promise(resolve => {
+    this.http.get(this.baseUrl+'/domTypes')
+      .map(res => res.json())
+      .subscribe(data => {
+        this.data = data;
+        resolve(this.data);
+      });
+  });
+}
+
   loginUser(email,password) {
-  if (this.data) {
-    return Promise.resolve(this.data);
-  }
+  // if (this.data) {
+  //   return Promise.resolve(this.data);
+  // }
 
   return new Promise(resolve => {
     // this.http.get(this.apiUrl+'/login')
@@ -61,7 +73,7 @@ export class RestService {
     .post(this.baseUrl + '/login', JSON.stringify(creds), options)
     .map(res => res.json())
     .subscribe(data => {
-        this.data = data;
+        this.data = data.access_token;
         resolve(this.data);
       });
   });
