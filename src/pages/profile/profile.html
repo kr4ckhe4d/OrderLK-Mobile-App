@@ -13,36 +13,38 @@
 
 
 <ion-content text-center>
-    <div class="user_cover_div">
-        <img src="assets/img/bg_purple.jpg">
-    </div>
-    <img src="assets/img/user_pic.png" class="user_logo">
-    <div class="below_pic" text-center>
-        <h1>Walter White</h1>
-        <button ion-button class="btn_follow">EDIT PROFILE</button>
-    </div>
-    <hr>
-    <p>ORDER HISTORY</p>
-    <div>
-        <ion-list no-lines scrollX="true">
-            <ion-item>
-                <ion-card text-center>
-                    <img src="assets/img/sample_product.png" class="product" />
-                    <ion-card-content>
-                        <ion-card-title>GeForce GTX 1080</ion-card-title>
-                        <p text-wrap>Ordered : 05/01/2017</p>
-                    </ion-card-content>
-                </ion-card>
-            </ion-item>
-            <ion-item>
-                <ion-card text-center>
-                    <img src="assets/img/sample_product.png" class="product" />
-                    <ion-card-content>
-                        <ion-card-title>GeForce GTX 1080</ion-card-title>
-                        <p text-wrap>Ordered : 05/01/2017</p>
-                    </ion-card-content>
-                </ion-card>
-            </ion-item>
-        </ion-list>
+    <div *ngIf="profileData">
+        <div class="user_cover_div">
+            <img src="assets/img/bg_purple.jpg">
+        </div>
+        <img src="assets/img/user_pic.png" class="user_logo">
+        <div class="below_pic" text-center>
+            <h1>{{ profileData.fname + profileData.lname }}</h1>
+            <button ion-button (click)="editProfileClicked" class="btn_follow">EDIT PROFILE</button>
+        </div>
+        <hr>
+        <p>ORDER HISTORY</p>
+        <div>
+            <ion-list no-lines scrollX="true">
+                <ion-item>
+                    <ion-card text-center>
+                        <img src="assets/img/sample_product.png" class="product" />
+                        <ion-card-content>
+                            <ion-card-title>GeForce GTX 1080</ion-card-title>
+                            <p text-wrap>Ordered : 05/01/2017</p>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-item>
+                <ion-item>
+                    <ion-card text-center>
+                        <img src="assets/img/sample_product.png" class="product" />
+                        <ion-card-content>
+                            <ion-card-title>GeForce GTX 1080</ion-card-title>
+                            <p text-wrap>Ordered : 05/01/2017</p>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-item>
+            </ion-list>
+        </div>
     </div>
 </ion-content>
