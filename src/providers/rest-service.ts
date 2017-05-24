@@ -67,6 +67,47 @@ export class RestService {
   });
 }
 
+  signUpUser(userCreds) {
+  // if (this.data) {
+  //   return Promise.resolve(this.data);
+  // }
+  return new Promise(resolve => {
+    // this.http.get(this.apiUrl+'/login')
+    //   .map(res => res.json())
+    //   .subscribe(data => {
+    //     this.data = data;
+    //     resolve(this.data);
+    //   });
+
+    let body = new FormData();
+    // body.append('fname', userCreds.fname);
+    //   body.append('lname',userCreds.lname);
+    //       body.append('email', userCreds.email);
+    //   body.append('password', userCreds.password);
+    //   body.append('dob',userCreds.dob);
+    //       body.append('street_address', userCreds.street_address);
+    //       body.append('country', userCreds.country);
+    //   body.append('city',userCreds.city);
+    //       body.append('postal', userCreds.postal);
+    //       body.append('contact_no', userCreds.contact_no);
+ 		let headers = new Headers({
+			'Content-Type': 'multipart/form-data'
+		});
+		let options = new RequestOptions({
+			headers: headers
+		});
+
+    // var creds = {email : email ,password : password};
+      this.http
+    .post(this.baseUrl + '/signup', JSON.stringify(userCreds), options)
+    .map(res => res.json())
+    .subscribe(data => {
+        this.data = data.message;
+        resolve(this.data);
+      });
+  });
+}
+
   getStores(accessToken) {
     console.log("in getStores : " + accessToken );
     let headers = new Headers({
