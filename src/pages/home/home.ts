@@ -17,7 +17,6 @@ import { RestService } from "../../providers/rest-service";
 export class HomePage {
 access_token:any;
 stores:any;
-baseUrl = 'http://0.0.0.0:8080/api/v1/';
   constructor(public navCtrl: NavController, 
               public menu:MenuController, 
               public navParams: NavParams,
@@ -44,13 +43,8 @@ baseUrl = 'http://0.0.0.0:8080/api/v1/';
   }
 
   onFollowClicked() {
-    // let modal = this.modalCtrl.create(StorePage);
-    // modal.present();
-    this.restApi.getStores(this.access_token)
-    .then(data => {
-      this.stores = data;
-      console.log(this.stores);
-    });
+    let modal = this.modalCtrl.create(StorePage);
+    modal.present();
   }
 
 }

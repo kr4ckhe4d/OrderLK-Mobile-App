@@ -72,11 +72,6 @@ export class RestService {
     let headers = new Headers({
       'access_token': accessToken
 		});
-
-  // if (this.data) {
-  //   return Promise.resolve(this.data);
-  // }
-
   return new Promise(resolve => {
     this.http.get('http://0.0.0.0:8080/api/v1/stores',{headers})
       .map(res => res.json())
@@ -87,4 +82,18 @@ export class RestService {
   });
 }
 
+  getDeals(accessToken) {
+    console.log("in getDeals : " + accessToken );
+    let headers = new Headers({
+      'access_token': accessToken
+		});
+  return new Promise(resolve => {
+    this.http.get('http://0.0.0.0:8080/api/v1/deals',{headers})
+      .map(res => res.json())
+      .subscribe(data => {
+        this.data = data;
+        resolve(this.data);
+      });
+  });
+}
 }

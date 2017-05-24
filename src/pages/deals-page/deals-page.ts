@@ -15,10 +15,11 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'deals-page.html',
 })
 export class DealsPage {
+    deals: any;
   rows: number[];
   products: {}[];
   users = null;
-
+access_token:any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public restApi:RestService,private storage: Storage) {
     this.users = this.getUsers();
 
@@ -47,7 +48,19 @@ export class DealsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DealsPage');
-    this.rows = Array.from(Array(Math.ceil(this.products.length / 2)).keys());
+                    this.storage.get('access_token').then((val) => {
+          this.access_token = val;
+        console.log('access_token home', val);
+
+                    this.restApi.getDeals(val)
+    .then(data => {
+      this.deals = data;
+      console.log(this.deals);
+      this.rows = Array.from(Array(Math.ceil(this.deals.length / 2)).keys());
+      console.log(this.rows);
+    });
+  });
+    this.rows = Array.from(Array(Math.ceil(this.deals.length / 2)).keys());
   }
 
   getUsers() {

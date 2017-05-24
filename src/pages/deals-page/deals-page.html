@@ -7,9 +7,6 @@
 <ion-header>
 
     <ion-navbar>
-        <button ion-button menuToggle icon-only persistent="true" class="burger">
-      <ion-icon name="menu"></ion-icon>
-    </button>
         <ion-title>Deals</ion-title>
     </ion-navbar>
 
@@ -17,17 +14,19 @@
 
 
 <ion-content padding>
-    <ion-row *ngFor="let i of rows">
-        <ion-col width-50 class="item-thumb" *ngFor="let product of products | slice:(i*2):(i+1)*2">
-            <a>
-                <img class="full-image " src="{{ product.src }}" alt=" " />
-                <span class="product-title">{{ product.title }}</span>
-                <span class="product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</span>
-                <hr/>
-                <span class="price dark ">Price : {{ product.price }}</span>
-                <span class="old-price ">545</span><br/>
-                <button class="button-buy">Buy</button>
-            </a>
-        </ion-col>
-    </ion-row>
+    <div *ngIf="deals && rows">
+        <ion-row *ngFor="let i of rows">
+            <ion-col width-50 class="item-thumb" *ngFor="let deal of deals | slice:(i*2):(i+1)*2">
+                <a>
+                    <img class="full-image " src=" product.src " alt=" " />
+                    <span class="product-title">{{ deal.product.name }}</span>
+                    <span class="product-desc">{{ deal.product.desc }}</span>
+                    <hr/>
+                    <span class="price dark ">Price : {{ deal.product.price }}</span>
+                    <span class="old-price ">545</span><br/>
+                    <button class="button-buy">Buy</button>
+                </a>
+            </ion-col>
+        </ion-row>
+    </div>
 </ion-content>
