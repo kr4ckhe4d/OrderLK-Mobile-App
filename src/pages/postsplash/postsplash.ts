@@ -8,6 +8,10 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from "rxjs/Observable";
 import { SignUpPage } from "../sign-up-page/sign-up-page";
+import { RestService } from "../../providers/rest-service";
+
+import { Storage } from '@ionic/storage';
+
 /**
  * Generated class for the Postsplash page.
  *
@@ -21,10 +25,12 @@ import { SignUpPage } from "../sign-up-page/sign-up-page";
 export class PostsplashPage {
 
   user: Observable<firebase.User>;
+  users:any;
   loginInput:{email: String,password: String};
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController, public navParams: NavParams, public afAuth: AngularFireAuth) {
+  constructor(public navCtrl: NavController,private storage: Storage, public modalCtrl: ModalController, public navParams: NavParams, public afAuth: AngularFireAuth, public restApi:RestService) {
         this.user = afAuth.authState;
+        this.storage.set('access_token', "");
   }
 
   ionViewDidLoad() {
@@ -35,6 +41,11 @@ export class PostsplashPage {
     //let modal = this.modalCtrl.create(LoginPage);
     //modal.present();
     this.navCtrl.push(LoginPage);
+    //     this.restApi.loginUser()
+    // .then(data => {
+    //   this.users = data;
+    //   console.log(this.users);
+    // });
   }
 
   onSignupClicked(){

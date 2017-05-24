@@ -25,6 +25,8 @@ import { HttpModule } from "@angular/http";
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { SignUpPage } from "../pages/sign-up-page/sign-up-page";
 
+import { IonicStorageModule } from '@ionic/storage';
+
 
 export const environment = {
   production: false,
@@ -57,7 +59,8 @@ export const environment = {
     IonicModule.forRoot(MyApp),
     HttpModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

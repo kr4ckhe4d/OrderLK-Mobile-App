@@ -14,20 +14,23 @@
     </div>
 
     <div text-center id="div_login">
-        <ion-list no-lines>
-            <ion-item style="background-color:transparent">
-                <ion-input type="text" [(ngModel)]="loginInput.email" placeholder="Username or Email" class="txt_login"></ion-input>
-            </ion-item>
-            <ion-item style="background-color:transparent">
-                <ion-input type="password" placeholder="Password" [(ngModel)]="loginInput.password" class="txt_login"></ion-input>
-            </ion-item>
-        </ion-list>
-        <button ion-button id="btn_login" (click)="onLoginClicked()">LOGIN</button>
+        <form (ngSubmit)="onLoginClicked()">
+            <ion-list no-lines>
+                <ion-item style="background-color:transparent">
+                    <ion-input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="loginInput.email" placeholder="Username or Email" class="txt_login"></ion-input>
+                </ion-item>
+                <ion-item style="background-color:transparent">
+                    <ion-input type="password" [ngModelOptions]="{standalone: true}" placeholder="Password" [(ngModel)]="loginInput.password" class="txt_login"></ion-input>
+                </ion-item>
+            </ion-list>
+            <button ion-button id="btn_login" type="submit">LOGIN</button>
+        </form>
+
     </div>
 
     <div text-center id="bottom_div">
         <p id="txt_member">Not a member?</p>
-        <button ion-button id="btn_account">CREATE ACCOUNT</button>
+        <button ion-button id="btn_account" (click)="onSignupClicked()">CREATE ACCOUNT</button>
     </div>
 
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RestService } from "../../providers/rest-service";
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the DealsPage page.
@@ -18,8 +19,12 @@ export class DealsPage {
   products: {}[];
   users = null;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public restApi:RestService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restApi:RestService,private storage: Storage) {
     this.users = this.getUsers();
+
+            this.storage.get('access_token').then((val) => {
+        console.log('access_token', val);
+  });
 
     this.products= [
   {"id": 1, "title": "iPad 4 Mini", "price": 500.01, "inventory": 2, "src":"http://www.vodafone.co.uk//cs/groups/public/documents/webcontent/ipad_pro_9.7_space_grey_350x35.jpg"},

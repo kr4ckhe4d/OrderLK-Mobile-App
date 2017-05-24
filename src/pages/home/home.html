@@ -16,19 +16,21 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-card text-center>
-        <div class="store_cover_div">
-            <img src="assets/img/redline_cover.jpg">
-        </div>
-        <img src="assets/img/redline_logo.png" class="store_logo">
-        <ion-item text-center>
-            <h2>REDLINE TECHNOLOGIES</h2>
-            <p text-wrap>3rd Floor, Majestic City, Galle Rd, Colombo</p>
-        </ion-item>
-        <div class="rating">
-            <span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span>
-            <p>8095 reviews</p>
-        </div>
-        <button ion-button class="btn_follow" (click)="onFollowClicked()">FOLLOW STORE</button>
-    </ion-card>
+    <div *ngIf="stores">
+        <ion-card text-center *ngFor="let store of stores">
+            <div class="store_cover_div">
+                <img src="assets/img/redline_cover.jpg">
+            </div>
+            <img src="assets/img/redline_logo.png" class="store_logo">
+            <ion-item text-center>
+                <h2>{{ store.name }}</h2>
+                <p text-wrap>{{ store.address }}</p>
+            </ion-item>
+            <div class="rating">
+                <span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span><span class="stars">☆</span>
+                <p>{{ store.review_count }} reviews</p>
+            </div>
+            <button ion-button class="btn_follow" (click)="onFollowClicked()">FOLLOW STORE</button>
+        </ion-card>
+    </div>
 </ion-content>
